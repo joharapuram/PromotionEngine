@@ -37,9 +37,13 @@ namespace PromotionEngine
                 int totalPriceofCandD = 0;
 
                 if (CounterofC == CounterofD)
-                    totalPriceofCandD = CounterofC * 30;    
-                
-                return totalPriceofA + totalPriceofB + totalPriceofCandD;
+                    totalPriceofCandD = CounterofC * 30;
+                else
+                    totalPriceofCandD = CounterofC > CounterofD ?
+                                                CounterofD * 30 + (CounterofC - CounterofD) * 20
+                                                : CounterofC * 30 + (CounterofD - CounterofC) * 15;
+
+                return totalPriceofA + totalPriceofB + totalPriceofCandD;                
             }
 
             int totalPriceofC = (CounterofC * priceofC);
