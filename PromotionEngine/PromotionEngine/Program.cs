@@ -10,6 +10,11 @@ namespace PromotionEngine
     {
         static void Main(string[] args)
         {
+            SKUProduct sKUProduct = new SKUProduct();
+            string skuType = "A";
+            SKUProduct product = sKUProduct.getProduct(skuType.ToUpper());
+            Console.WriteLine("Price of Product {0} is {1}", product.Id, product.Price);
+            Console.ReadLine();
         }
     }
 }
