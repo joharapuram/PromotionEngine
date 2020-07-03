@@ -22,8 +22,7 @@ namespace PromotionEngine
                 Console.WriteLine("Please enter type of sku product A,B,C,D");
                 string skuType = Console.ReadLine();
                 SKUProduct product = sKUProduct.getProduct(skuType.ToUpper());
-                listofProducts.Add(product);
-                Console.WriteLine("Price of Product {0} is {1}", listofProducts[i].Id, listofProducts[i].Price);
+                listofProducts.Add(product);                
             }
 
             int totalCost = priceCalculator.GetTotalPrice(listofProducts);
